@@ -18,6 +18,8 @@
   "homepage": "https://github.com/autvincere/startbootstrap-scrolling-nav#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.3",
     "gulp-sass": "^2.2.0",
     "gulp-uglify": "^1.5.3"
   },
