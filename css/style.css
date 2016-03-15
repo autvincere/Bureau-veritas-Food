@@ -10,7 +10,7 @@
 body {
   width: 100%;
   height: 100%;
-  font-family: Roboto, Helvetica,sans-serif; }
+  font-family: Roboto, Helvetica, sans-serif; }
 
 html {
   width: 100%;
@@ -41,7 +41,7 @@ of those sections to manage the look and feel of the site. */
 
 .services-section {
   height: 100%;
-  padding-top: 150px;
+  padding-top: 90px;
   text-align: center;
   background: #fff; }
 
@@ -70,16 +70,20 @@ a.navbar-brand > h1 {
   text-indent: 1000px;
   font-size: 0px; }
 
-div#llamanos {
+article#llamanos {
   background-color: #BD183A;
   width: 80%;
   color: #fff;
-  padding: 8px; }
-  div#llamanos a {
-    color: #fff;
-    text-decoration: none; }
-    div#llamanos a span {
-      margin-right: 4px; }
+  padding: 8px;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+  a span {
+    margin-right: 4px; }
 
 p#intro {
   margin: 21px 0px 10px 0px;
@@ -96,3 +100,6 @@ div#line {
 
 .inline {
   display: inline; }
+
+section#actualidad div.row div.col-lg-12 {
+  text-align: left; }

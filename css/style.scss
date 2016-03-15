@@ -1,7 +1,8 @@
-@font-face{
-font-family: "Roboto", sans-serif;
-src: url("../fonts/Roboto") format("ttf");    
+@font-face {
+    font-family: "Roboto", sans-serif;
+    src: url("../fonts/Roboto") format("ttf");
 }
+
 // Converted Variables
 $color-background: #BD183A;
 // Custom Media Query Variables
@@ -15,7 +16,7 @@ $color-background: #BD183A;
 body {
     width: 100%;
     height: 100%;
-    font-family: Roboto, Helvetica,sans-serif;
+    font-family: Roboto, Helvetica, sans-serif;
 }
 
 html {
@@ -56,7 +57,7 @@ of those sections to manage the look and feel of the site. */
 
 .services-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 90px;
     text-align: center;
     background: #fff;
 }
@@ -67,57 +68,77 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
     background: #eee;
 }
-.navbar-brand{
+
+.navbar-brand {
     height: 72px;
     padding: 7px 14px;
 }
-.navbar-toggle{
+
+.navbar-toggle {
     margin-top: 22px;
 }
+
 .navbar-default {
     background-color: #FFFFFF;
     border-bottom: none!important;
     border-top: 5px solid $color-background;
 }
-        a {
-            &.navbar-brand> {
-                img {
-                    width: 30%
-                }
-                h1 {
-                    text-indent: 1000px;
-                    font-size: 0px;
-                }
-            }
+
+a {
+    &.navbar-brand> {
+        img {
+            width: 30%
         }
-div#llamanos{
-    background-color: $color-background;
+        h1 {
+            text-indent: 1000px;
+            font-size: 0px;
+        }
+    }
+}
+
+article#llamanos {
+    background-color: #BD183A;
     width: 80%;
     color: #fff;
     padding: 8px;
-    a{
-        color: #fff;
-        text-decoration: none;
-//        font-weight: 600;
-        span{
-            margin-right: 4px;
-        }
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    //        font-weight: 600;
+    span {
+        margin-right: 4px;
     }
 }
-p#intro{
+p#intro {
     margin: 21px 0px 10px 0px;
     color: gray;
-  
 }
-  div#line{
-        height: 2px;
-        width: 64px;
-        background-color: $color-background;
-        /* padding: 3px 0px; */
-        margin-top: 10px;
-        margin-bottom: 10px;
-      margin: 0 auto;
-    }
-.inline{
+div#line {
+    height: 2px;
+    width: 64px;
+    background-color: $color-background;
+    /* padding: 3px 0px; */
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+}
+.inline {
     display: inline;
+}
+section#actualidad {
+    div {
+        &.row {
+            div {
+                &.col-lg-12 {
+                    text-align: left;
+                }
+            }
+        }
+    }
 }
