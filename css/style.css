@@ -41,9 +41,15 @@ of those sections to manage the look and feel of the site. */
 
 .services-section {
   height: 100%;
-  padding-top: 90px;
-  text-align: center;
-  background: #fff; }
+  /* padding-top: 74px; */
+  /* text-align: center; */
+  background: #AA5CB3;
+  float: left;
+  margin: 0 auto;
+  /* text-align: center; */
+  /* display: inline-block; */
+  /* position: absolute; */
+  width: 100%; }
 
 .contact-section {
   height: 100%;
@@ -71,8 +77,11 @@ a.navbar-brand > h1 {
   font-size: 0px; }
 
 article#llamanos {
+  padding: 8px; }
+
+.llamanos {
   background-color: #BD183A;
-  width: 80%;
+  width: 73%;
   color: #fff;
   padding: 8px;
   margin: 0 auto;
@@ -101,5 +110,62 @@ div#line {
 .inline {
   display: inline; }
 
-section#actualidad div.row div.col-lg-12 {
+section#actualidad div.container div.row div.col-lg-12 {
   text-align: left; }
+  section#actualidad div.container div.row div.col-lg-12 a {
+    color: #BD183A; }
+    section#actualidad div.container div.row div.col-lg-12 a:hover {
+      text-decoration: none; }
+
+.clear-padding {
+  padding: 0px; }
+
+.lib-item {
+  margin: 15px; }
+
+.lib-panel .row,
+.lib-panel .col-md-6 {
+  padding: 0;
+  background-color: #FFFFFF; }
+
+.lib-panel .lib-row {
+  padding: 0 20px 0 20px; }
+
+.lib-panel .lib-row.lib-header {
+  background-color: #FFFFFF;
+  font-size: 20px;
+  padding: 10px 20px 0 20px; }
+
+.lib-panel .lib-row.lib-header .lib-header-seperator {
+  height: 2px;
+  width: 26px;
+  background-color: #d9d9d9;
+  margin: 7px 0 7px 0; }
+
+.lib-panel .lib-row.lib-desc {
+  position: relative;
+  height: 100%;
+  display: block;
+  font-size: 13px; }
+
+.lib-panel .lib-row.lib-desc a {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  left: 20px; }
+
+.row-margin-bottom {
+  margin-bottom: 20px; }
+
+.box-shadow {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); }
+
+.mas {
+  /* background-color: red; */
+  text-align: right; }
+  .mas span {
+    /* vertical-align: middle; */
+    text-align: center;
+    color: white;
+    padding: 3px 2px 3px 3px;
+    background-color: #BD183A; }
