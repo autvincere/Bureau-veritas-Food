@@ -39,17 +39,21 @@ of those sections to manage the look and feel of the site. */
   text-align: center;
   background: #eee; }
 
-.services-section {
+.actualidad-section {
   height: 100%;
-  /* padding-top: 74px; */
-  /* text-align: center; */
-  background: #AA5CB3;
   float: left;
   margin: 0 auto;
-  /* text-align: center; */
-  /* display: inline-block; */
-  /* position: absolute; */
-  width: 100%; }
+  width: 100%;
+  font-size: 1.55em;
+  padding: 0.3em 0px; }
+
+.servicios-section {
+  height: 100%;
+  float: left;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 1.55em;
+  padding: 0.3em 0px; }
 
 .contact-section {
   height: 100%;
@@ -120,52 +124,43 @@ section#actualidad div.container div.row div.col-lg-12 {
 .clear-padding {
   padding: 0px; }
 
-.lib-item {
-  margin: 15px; }
-
-.lib-panel .row,
-.lib-panel .col-md-6 {
-  padding: 0;
-  background-color: #FFFFFF; }
-
-.lib-panel .lib-row {
-  padding: 0 20px 0 20px; }
-
-.lib-panel .lib-row.lib-header {
-  background-color: #FFFFFF;
-  font-size: 20px;
-  padding: 10px 20px 0 20px; }
-
-.lib-panel .lib-row.lib-header .lib-header-seperator {
-  height: 2px;
-  width: 26px;
-  background-color: #d9d9d9;
-  margin: 7px 0 7px 0; }
-
-.lib-panel .lib-row.lib-desc {
-  position: relative;
-  height: 100%;
-  display: block;
-  font-size: 13px; }
-
-.lib-panel .lib-row.lib-desc a {
-  position: absolute;
-  width: 100%;
-  bottom: 10px;
-  left: 20px; }
+div#tarjeta {
+  padding-top: 10px; }
+  div#tarjeta figure {
+    display: inline-block;
+    width: 52%;
+    vertical-align: top;
+    padding: 8px 8px 7px 8px; }
+  div#tarjeta article {
+    display: inline-block;
+    width: 47%; }
+    div#tarjeta article h3 {
+      margin: 7px 0px; }
 
 .row-margin-bottom {
   margin-bottom: 20px; }
 
 .box-shadow {
+  -ms-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); }
 
-.mas {
-  /* background-color: red; */
-  text-align: right; }
-  .mas span {
-    /* vertical-align: middle; */
+a.mas {
+  text-align: right;
+  padding: 6px;
+  width: 100%;
+  display: block; }
+  a.mas span {
     text-align: center;
     color: white;
-    padding: 3px 2px 3px 3px;
+    padding: 3px 3.5px 3px 4px;
+    font-size: 1.3em;
     background-color: #BD183A; }
+
+section#servicios {
+  width: 100%;
+  background-color: #BD183A; }
+  section#servicios a#titulo span {
+    display: inline-block; }
+  section#servicios a#titulo h3 {
+    display: inline-block; }
