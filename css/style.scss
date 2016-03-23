@@ -93,7 +93,10 @@ of those sections to manage the look and feel of the site. */
     border-bottom: none!important;
     border-top: 5px solid $color-background;
 }
-
+div#main_slider{
+    width: 100%;
+    background-color: green;
+}
 a {
     &.navbar-brand> {
         img {

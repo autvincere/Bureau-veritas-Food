@@ -1,0 +1,75 @@
+p.flex-caption{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    color: #fff;
+    display: inline-block;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+    /* right: 40px; */
+    padding: 2em;
+    /* width: 50%; */
+    zoom: 1;
+    text-align: right;
+}
+/*.slide_text {
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.5);  /* FF3+, Saf3+, Opera 10.10+, Chrome, IE9 */
+ /* bottom: 0;
+  color: #fff;
+  display: block;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000); /* IE6–IE9 */
+  /*left: 0;
+  padding: 1em;
+  position: absolute;
+  width: 50%;
+  zoom: 1;
+}*/
+
+.slide_title {
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.slide_byline {
+  font-size: 0.8em;
+  display: block;  
+}
+
+.flexslider .slides > li { 
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  display: none; 
+  -webkit-backface-visibility: hidden;
+}
+.flexslider-container, 
+.flexslider .slides, 
+.flex-viewport {
+    height: 80%;
+}
+
+html, 
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+
+
+ul.slides {
+  margin: 0;
+  padding: 0;
+}
+
+.flexslider {
+  margin: 0; 
+  padding: 0; 
+  width: 100%; 
+  height: 100%; 
+  border: 0px; 
+  overflow: hidden;
+}
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
