@@ -11,6 +11,15 @@ $tabletPortrait: 767px;
 $tabletLandscape: 1024px;
 $desktop: 1174px;
 $largeScreen: 1400px;
+//mixin
+@mixin transition($tiempo) {
+    -webkit-transition: $tiempo;
+    -moz-transition: $tiempo;
+    -o-transition: $tiempo;
+    -ms-transition: $tiempo;
+    transition: $tiempo;
+}
+
 
 /*!
  * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
@@ -22,6 +31,10 @@ body {
     width: 100%;
     height: 100%;
     font-family: Roboto, Helvetica, sans-serif;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 html {
@@ -48,7 +61,7 @@ of those sections to manage the look and feel of the site. */
 
 .intro-section {
     height: 100%;
-        padding-top: 65px;
+    padding-top: 65px;
     text-align: center;
     background: #fff;
 }
@@ -87,7 +100,7 @@ of those sections to manage the look and feel of the site. */
 
 .navbar-brand {
     height: 72px;
-        padding: 10px 14px;
+    padding: 10px 14px;
 }
 
 .navbar-toggle {
@@ -100,6 +113,32 @@ of those sections to manage the look and feel of the site. */
     border-top: 5px solid $color-background;
 }
 
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>
+a:hover {
+    color: #555;
+    background-color: #e7e7e7;
+    display: inline-block;
+//    &:focus:after{
+//     width: 100%;
+//        background: #868686;    
+//    }
+//    &:hover:after {
+//        width: 100%;
+//        background: #868686;
+//    }
+//    &:after {
+//        content: ' ';
+//        display: block;
+//        bottom: 5px;
+//        height: 1.5px;
+//        width: 0;
+//        background: transparent;
+//        transition: width .3s ease, background-color .3s ease;
+//    }
+}
+
 div#main_slider {
     width: 100%;
     background-color: green;
@@ -107,11 +146,15 @@ div#main_slider {
 
 a {
     &.navbar-brand> {
-        img {
-            width: 65%;
-             @media screen and (max-width: $tabletPortrait) {
-        width: 35%;
-    }
+        img#desktop {
+            @media screen and (max-width: $tabletPortrait) {
+                display: none;
+            }
+        }
+        img#movil {
+            @media screen and (min-width: $tabletPortrait) {
+                display: none;
+            }
         }
         h1 {
             text-indent: 1000px;

@@ -41,7 +41,9 @@
                 <!--<a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>-->
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#page-top">
-                        <img alt="Bureau Veritas" src="img/logo_header.jpg" />
+<!--                        <img src="img/bureau_veritas_logo.svg" onerror="this.src='img/bureau_veritas_logo.jpg'; this.onerror=null;" alt="Bureau Veritas"/>-->
+                       <img id ="desktop" src="img/bureau_veritas_logo.jpg" alt="Bureau Veritas"/>
+                       <img id ="movil" src="img/bureau_veritas_logo_movil.jpg" alt="Bureau Veritas"/>
                         <h1>Bureau Veritas Alimentos</h1>
                     </a>
                 </div>
@@ -71,58 +73,60 @@
 
     <!-- Intro Section -->
     <section id="intro" class="intro-section">
-<!--  Inicio  flexslider-->
-    <div class="flexslider-container">
-        <div class="flexslider">
-            <ul class="slides">
-                <li>
-                    <img src="http://lorempixel.com/1500/500/animals" />
-                    <div class="content_caption">
-                        <div class="caption">
-                           <h1>Esto es un titulo</h1>
-                            <p>
-                                esto es un parrafo Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere voluptates quae.
-                            </p>
+        <!--  Inicio  flexslider-->
+        <div class="flexslider-container">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li>
+<!--                        <img src="http://lorempixel.com/1500/500/animals" />-->
+                        <div class="content_caption">
+                            <div class="caption">
+                                <h1>Esto es un titulo</h1>
+                                <p>
+                                    esto es un parrafo Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere voluptates quae.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li><img src="http://lorempixel.com/1500/500/cats" />
-                       <div class="content_caption">
-                        <div class="caption">
-                           <h1>Esto es un titulo</h1>
-                            <p>
-                                esto es un parrafo Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere voluptates quae.
-                            </p>
+                    </li>
+                    <li>
+<!--                       <img src="http://lorempixel.com/1500/500/cats" />-->
+                        <div class="content_caption">
+                            <div class="caption">
+                                <h1>Esto es un titulo</h1>
+                                <p>
+                                    esto es un parrafo Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere voluptates quae.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li><img src="http://lorempixel.com/1500/500/food" />
-                       <div class="content_caption">
-                        <div class="caption">
-                           <h1>Esto es un titulo</h1>
-                            <p>
-                                esto es un parrafo Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere voluptates quae.
-                            </p>
+                    </li>
+                    <li>
+<!--                       <img src="http://lorempixel.com/1500/500/food" />-->
+                        <div class="content_caption">
+                            <div class="caption">
+                                <h1>Esto es un titulo</h1>
+                                <p>
+                                    esto es un parrafo Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere voluptates quae.
+                                </p>
+                            </div>
                         </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="patch">
+                <article id="llamanos_full">
+                    <span class="glyphicon glyphicon-stop triangulo"></span>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p class="inline">Llámanos ahora </p><a href="+56223502100"><span class="glyphicon glyphicon-earphone"></span>(+56 2) 2350 2100 </a></div>
+                        <div class="col-xs-12">Escríbenos a</div>
+                        <div class="col-xs-12"><a href="#"><span class="glyphicon glyphicon-envelope"></span>Consultas@bureauveritas.cl</a></div>
+                        <div class="col-xs-12">O Contactanos a través de nuestro </div>
+                        <div class="col-xs-12"> <a href=""><span class="glyphicon glyphicon-list-alt"></span>Formulario</a></div>
                     </div>
-                </li>
-            </ul>
+                </article>
+            </div>
         </div>
-        <div id="patch">
-            <article id="llamanos_full">
-               <span class="glyphicon glyphicon-stop triangulo"></span>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <p class="inline">Llámanos ahora </p><a href="+56223502100"><span class="glyphicon glyphicon-earphone"></span>(+56 2) 2350 2100 </a></div>
-                    <div class="col-xs-12">Escríbenos a</div>
-                    <div class="col-xs-12"><a href="#"><span class="glyphicon glyphicon-envelope"></span>Consultas@bureauveritas.cl</a></div>
-                    <div class="col-xs-12">O Contactanos a través de nuestro </div>
-                    <div class="col-xs-12"> <a href=""><span class="glyphicon glyphicon-list-alt"></span>Formulario</a></div>
-                </div>
-        </article>
-        </div>
-    </div>
-   <!--  cierre  flexslider-->
+        <!--  cierre  flexslider-->
 
         <article id="llamanos">
             <div class="container">
@@ -164,7 +168,7 @@
                     <div id="tarjeta" class="col-xs-12 col-sm-6 col-md-6">
                         <div class="row box-shadow">
                             <figure>
-                                <img class="lib-img-show" src="http://lorempixel.com/190/110/?random=123">
+<!--                                <img class="lib-img-show" src="http://lorempixel.com/190/110/?random=123">-->
                             </figure>
                             <article>
                                 <h3>
@@ -183,7 +187,7 @@
                     <div id="tarjeta" class="col-xs-12 col-sm-6 col-md-6">
                         <div class="row box-shadow">
                             <figure>
-                                <img class="lib-img-show" src="http://lorempixel.com/190/110/?random=123">
+<!--                                <img class="lib-img-show" src="http://lorempixel.com/190/110/?random=123">-->
                             </figure>
                             <article>
                                 <h3>
@@ -202,7 +206,7 @@
                     <div id="tarjeta" class="col-xs-12 col-sm-6 col-md-6">
                         <div class="row box-shadow">
                             <figure>
-                                <img class="lib-img-show" src="http://lorempixel.com/190/110/?random=123">
+<!--                                <img class="lib-img-show" src="http://lorempixel.com/190/110/?random=123">-->
                             </figure>
                             <article>
                                 <h3>
@@ -221,7 +225,7 @@
                     <div id="tarjeta" class="col-xs-12 col-sm-6 col-md-6">
                         <div class="row box-shadow">
                             <figure>
-                                <img class="lib-img-show" src="http://lorempixel.com/190/110/?random=123">
+<!--                                <img class="lib-img-show" src="http://lorempixel.com/190/110/?random=123">-->
                             </figure>
                             <article>
                                 <h3>
@@ -259,7 +263,7 @@
                     <div id="tarjeta" class="col-xs-12 col-sm-6 col-md-6">
                         <div class="row box-shadow">
                             <figure>
-                                <img class="lib-img-show" src="http://lorempixel.com/190/110/?random=123">
+<!--                                <img class="lib-img-show" src="http://lorempixel.com/190/110/?random=123">-->
                             </figure>
                             <article>
                                 <h3>
@@ -278,7 +282,7 @@
                     <div id="tarjeta" class="col-xs-12 col-sm-6 col-md-6">
                         <div class="row box-shadow">
                             <figure>
-                                <img class="lib-img-show" src="http://lorempixel.com/190/110/?random=123">
+<!--                                <img class="lib-img-show" src="http://lorempixel.com/190/110/?random=123">-->
                             </figure>
                             <article>
                                 <h3>
@@ -297,7 +301,7 @@
                     <div id="tarjeta" class="col-xs-12 col-sm-6 col-md-6">
                         <div class="row box-shadow">
                             <figure>
-                                <img class="lib-img-show" src="http://lorempixel.com/190/110/?random=123">
+<!--                                <img class="lib-img-show" src="http://lorempixel.com/190/110/?random=123">-->
                             </figure>
                             <article>
                                 <h3>
@@ -316,7 +320,7 @@
                     <div id="tarjeta" class="col-xs-12 col-sm-6 col-md-6">
                         <div class="row box-shadow">
                             <figure>
-                                <img class="lib-img-show" src="http://lorempixel.com/190/110/?random=123">
+<!--                                <img class="lib-img-show" src="http://lorempixel.com/190/110/?random=123">-->
                             </figure>
                             <article>
                                 <h3>
@@ -352,9 +356,8 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
-    <!-- Slides js-->
+    <!-- Flexslider js-->
     <script src="js/jquery.flexslider.js"></script>
-<!--<script src="js/jquery.slides.min.js"></script>-->
     <!-- Funciones-->
     <script src="js/funciones.js"></script>
 
