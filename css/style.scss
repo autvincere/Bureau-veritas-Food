@@ -6,6 +6,11 @@
 // Converted Variables
 $color-background: #BD183A;
 // Custom Media Query Variables
+$smartphone: 480px;
+$tabletPortrait: 767px;
+$tabletLandscape: 1024px;
+$desktop: 1174px;
+$largeScreen: 1400px;
 
 /*!
  * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
@@ -43,7 +48,7 @@ of those sections to manage the look and feel of the site. */
 
 .intro-section {
     height: 100%;
-    padding-top: 90px;
+        padding-top: 65px;
     text-align: center;
     background: #fff;
 }
@@ -63,6 +68,7 @@ of those sections to manage the look and feel of the site. */
     font-size: 1.55em;
     padding: 0.3em 0px;
 }
+
 .servicios-section {
     height: 100%;
     float: left;
@@ -81,7 +87,7 @@ of those sections to manage the look and feel of the site. */
 
 .navbar-brand {
     height: 72px;
-    padding: 7px 14px;
+        padding: 10px 14px;
 }
 
 .navbar-toggle {
@@ -93,14 +99,19 @@ of those sections to manage the look and feel of the site. */
     border-bottom: none!important;
     border-top: 5px solid $color-background;
 }
-div#main_slider{
+
+div#main_slider {
     width: 100%;
     background-color: green;
 }
+
 a {
     &.navbar-brand> {
         img {
-            width: 30%
+            width: 65%;
+             @media screen and (max-width: $tabletPortrait) {
+        width: 35%;
+    }
         }
         h1 {
             text-indent: 1000px;
@@ -109,12 +120,65 @@ a {
     }
 }
 
+div#patch {
+    position: absolute;
+    top: 130px;
+    right: 80px;
+    @media screen and (max-width: $tabletPortrait) {
+        display: none;
+    }
+    article#llamanos_full {
+        background-color: $color-background;
+        width: 400px;
+        color: #fff;
+        padding: 8px;
+        margin: 0 auto;
+        display: inline-block;
+        text-align: center;
+        height: 160px;
+        font-weight: 500;
+        div {
+            &.row {
+                top: 17px;
+                position: absolute;
+                font-size: 1.2em;
+                div {
+                    &.col-xs-12 {
+                        margin-bottom: 2px;
+                        a {
+                            &:hover {
+                                text-decoration: none;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        span {
+            &.glyphicon {
+                margin-right: 6px;
+                font-size: 20px;
+                vertical-align: baseline;
+            }
+            &.triangulo {
+                color: white;
+                top: -18px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
 article#llamanos {
     padding: 8px;
+    @media screen and (min-width: $tabletPortrait) {
+        display: none;
+    }
 }
 
 .llamanos {
-    background-color: #BD183A;
+    background-color: $color-background;
     width: 73%;
     color: #fff;
     padding: 8px;
