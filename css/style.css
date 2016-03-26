@@ -130,7 +130,7 @@ div#patch {
     div#patch article#llamanos_full span.glyphicon {
       margin-right: 6px;
       font-size: 20px;
-      vertical-align: baseline; }
+      vertical-align: top; }
     div#patch article#llamanos_full span.triangulo {
       color: white;
       top: -18px;
