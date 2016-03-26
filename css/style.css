@@ -10,7 +10,11 @@
 body {
   width: 100%;
   height: 100%;
-  font-family: Roboto, Helvetica, sans-serif; }
+  font-family: Roboto, Helvetica, sans-serif;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
 
 html {
   width: 100%;
@@ -73,15 +77,25 @@ of those sections to manage the look and feel of the site. */
   border-bottom: none !important;
   border-top: 5px solid #BD183A; }
 
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active >
+a:hover {
+  color: #555;
+  background-color: #e7e7e7;
+  display: inline-block; }
+
 div#main_slider {
   width: 100%;
   background-color: green; }
 
-a.navbar-brand > img {
-  width: 65%; }
-  @media screen and (max-width: 767px) {
-    a.navbar-brand > img {
-      width: 35%; } }
+@media screen and (max-width: 767px) {
+  a.navbar-brand > img#desktop {
+    display: none; } }
+
+@media screen and (min-width: 767px) {
+  a.navbar-brand > img#movil {
+    display: none; } }
 
 a.navbar-brand > h1 {
   text-indent: 1000px;
@@ -116,7 +130,7 @@ div#patch {
     div#patch article#llamanos_full span.glyphicon {
       margin-right: 6px;
       font-size: 20px;
-      vertical-align: baseline; }
+      vertical-align: top; }
     div#patch article#llamanos_full span.triangulo {
       color: white;
       top: -18px;
