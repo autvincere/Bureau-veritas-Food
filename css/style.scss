@@ -1,275 +1,344 @@
-@font-face {
-    font-family: "Roboto", sans-serif;
-    src: url("../fonts/Roboto") format("ttf");
-}
-
-// Converted Variables
-$color-background: #BD183A;
-// Custom Media Query Variables
-$smartphone: 480px;
-$tabletPortrait: 767px;
-$tabletLandscape: 1024px;
-$desktop: 1174px;
-$largeScreen: 1400px;
-//mixin
-@mixin transition($tiempo) {
-    -webkit-transition: $tiempo;
-    -moz-transition: $tiempo;
-    -o-transition: $tiempo;
-    -ms-transition: $tiempo;
-    transition: $tiempo;
-}
-
-
-/*!
+    @font-face {
+        font-family: "Roboto", sans-serif;
+        src: url("../fonts/Roboto") format("ttf");
+    }
+    
+    // Converted Variables
+    $color-background: #BD183A;
+    // Custom Media Query Variables
+    $smartphone: 480px;
+    $tabletPortrait: 767px;
+    $tabletLandscape: 1024px;
+    $desktop: 1174px;
+    $largeScreen: 1400px;
+    //mixin
+    @mixin transition($tiempo) {
+        -webkit-transition: $tiempo;
+        -moz-transition: $tiempo;
+        -o-transition: $tiempo;
+        -ms-transition: $tiempo;
+        transition: $tiempo;
+    }
+    /*!
  * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-
-body {
-    width: 100%;
-    height: 100%;
-    font-family: Roboto, Helvetica, sans-serif;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
-
-html {
-    width: 100%;
-    height: 100%;
-}
-
-@media(min-width:767px) {
-    .navbar {
-        padding: 20px 0;
-        -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
-        transition: background .5s ease-in-out, padding .5s ease-in-out;
+    
+    body {
+        width: 100%;
+        height: 100%;
+        font-family: Roboto, Helvetica, sans-serif;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
     }
-    .top-nav-collapse {
-        padding: 0;
+    
+    html {
+        width: 100%;
+        height: 100%;
     }
-}
-
-
-/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+    
+    nav {
+        @include transition(all 0.35s linear);
+    }
+    
+    @media(min-width:767px) {
+        .navbar {
+            padding: 10px 0;
+            @include transition(all 0.35s linear);
+            //        -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            //        -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            //        transition: background .5s ease-in-out, padding .5s ease-in-out;
+        }
+        .top-nav-collapse {
+            padding: 0;
+        }
+    }
+    /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
 of those sections to manage the look and feel of the site. */
-
-.intro-section {
-    height: 100%;
-    padding-top: 65px;
-    text-align: center;
-    background: #fff;
-}
-
-.about-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #eee;
-}
-
-.actualidad-section {
-    height: 100%;
-    float: left;
-    margin: 0 auto;
-    width: 100%;
-    font-size: 1.55em;
-    padding: 0.3em 0px;
-}
-
-.servicios-section {
-    height: 100%;
-    float: left;
-    margin: 0 auto;
-    width: 100%;
-    font-size: 1.55em;
-    padding: 0.3em 0px;
-}
-
-.contact-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #eee;
-}
-
-.navbar-brand {
-    height: 72px;
-    padding: 10px 14px;
-}
-
-.navbar-toggle {
-    margin-top: 22px;
-}
-
-.navbar-default {
-    background-color: #FFFFFF;
-    border-bottom: none!important;
-    border-top: 5px solid $color-background;
-}
-
-.navbar-default .navbar-nav>.active>a,
-.navbar-default .navbar-nav>.active>a:focus,
-.navbar-default .navbar-nav>.active>
-a:hover {
-    color: #555;
-    background-color: #e7e7e7;
-    display: inline-block;
-//    &:focus:after{
-//     width: 100%;
-//        background: #868686;    
-//    }
-//    &:hover:after {
-//        width: 100%;
-//        background: #868686;
-//    }
-//    &:after {
-//        content: ' ';
-//        display: block;
-//        bottom: 5px;
-//        height: 1.5px;
-//        width: 0;
-//        background: transparent;
-//        transition: width .3s ease, background-color .3s ease;
-//    }
-}
-
-div#main_slider {
-    width: 100%;
-    background-color: green;
-}
-
-a {
-    &.navbar-brand> {
-        img#desktop {
-            @media screen and (max-width: $tabletPortrait) {
-                display: none;
-            }
-        }
-        img#movil {
-            @media screen and (min-width: $tabletPortrait) {
-                display: none;
-            }
-        }
-        h1 {
-            text-indent: 1000px;
-            font-size: 0px;
-        }
-    }
-}
-
-div#patch {
-    position: absolute;
-    top: 130px;
-    right: 80px;
-    @media screen and (max-width: $tabletPortrait) {
-        display: none;
-    }
-    article#llamanos_full {
-        background-color: $color-background;
-        width: 400px;
-        color: #fff;
-        padding: 8px;
-        margin: 0 auto;
-        display: inline-block;
+    
+    .intro-section {
+        height: 100%;
+        padding-top: 65px;
         text-align: center;
-        height: 160px;
-        font-weight: 500;
-        div {
-            &.row {
-                top: 17px;
-                position: absolute;
-                font-size: 1.2em;
-                div {
-                    &.col-xs-12 {
-                        margin-bottom: 2px;
-                        a {
-                            &:hover {
-                                text-decoration: none;
-                                color: white;
+        background: #fff;
+    }
+    
+    .about-section {
+        height: 100%;
+        padding-top: 150px;
+        text-align: center;
+        background: #eee;
+    }
+    
+    .actualidad-section {
+        height: 100%;
+        float: left;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 1.55em;
+        padding: 0.3em 0px;
+    }
+div{
+    &.servicios-section {
+        height: 100%;
+        float: left;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0.3em 0px;
+        text-transform: capitalize;
+    font-size: 2rem;
+    text-decoration: none;
+        div{
+            &.col-lg-12{
+                a#titulo{
+                    text-decoration: none;
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+    
+    
+    .contact-section {
+        height: 100%;
+        padding-top: 150px;
+        text-align: center;
+        background: #eee;
+    }
+    
+    .navbar-header {
+        @include transition(all 0.35s linear);
+    }
+    
+    .navbar-brand {
+        height: 73px;
+        padding: 4px 14px;
+    }
+    
+    .navbar-toggle {
+        margin-top: 22px;
+    }
+    
+    .navbar-default {
+        background-color: #FFFFFF;
+        border-bottom: none!important;
+        border-top: 5px solid $color-background;
+        @include transition(all 0.35s linear);
+    }
+    
+    .navbar-default .navbar-nav>.active>a,
+    .navbar-default .navbar-nav>.active>a:focus,
+    .navbar-default .navbar-nav>.active> a:hover {
+        color: #555;
+        background-color: rgba(189, 24, 58, 0.12);
+        //    display: inline-block;
+    }
+    /*estilos celular*/
+    
+    .navbar-toggle .icon-bar {
+        display: block;
+        width: 30px;
+        height: 4px;
+        border-radius: 1px;
+    }
+    
+    .navbar-default .navbar-toggle {
+        border-color: #fff;
+    }
+    /*Cierre estilos celular*/
+    
+    div#main_slider {
+        width: 100%;
+        background-color: green;
+    }
+    
+    a {
+        &.navbar-brand> {
+            img#desktop {
+                @media screen and (max-width: $tabletPortrait) {
+                    display: none;
+                }
+            }
+            img#movil {
+                @media screen and (min-width: $tabletPortrait) {
+                    display: none;
+                }
+            }
+            h1 {
+                text-indent: 1000px;
+                font-size: 0px;
+            }
+        }
+    }
+    
+    div#patch {
+        position: absolute;
+        top: 105px;
+        right: 10px;
+        @media screen and (max-width: $tabletPortrait) {
+            display: none;
+        }
+        article#llamanos_full {
+            background-color: $color-background;
+            width: 315px;
+            color: #fff;
+            padding: 8px;
+            margin: 0 auto;
+            display: inline-block;
+            text-align: center;
+            height: 160px;
+            font-weight: 500;
+            opacity: 0.9;
+            div {
+                &.row {
+                    top: 17px;
+                    position: absolute;
+                    font-size: 1.2em;
+                    div {
+                        &.col-xs-12 {
+                            margin-bottom: 2px;
+                            a {
+                                &:hover {
+                                    text-decoration: none;
+                                    color: white;
+                                }
                             }
                         }
                     }
                 }
             }
-        }
-        span {
-            &.glyphicon {
-                margin-right: 6px;
-                font-size: 20px;
-                vertical-align: top;
+            span {
+                &.glyphicon {
+                    margin-right: 6px;
+                    font-size: 20px;
+                    vertical-align: top;
+                }
+                &.triangulo {
+                    color: white;
+                    top: -18px;
+                    font-size: 20px;
+                }
             }
-            &.triangulo {
-                color: white;
-                top: -18px;
-                font-size: 20px;
-            }
         }
     }
-}
-
-article#llamanos {
-    padding: 8px;
-    @media screen and (min-width: $tabletPortrait) {
-        display: none;
-    }
-}
-
-.llamanos {
-    background-color: $color-background;
-    width: 73%;
-    color: #fff;
-    padding: 8px;
-    margin: 0 auto;
-    display: inline-block;
-    text-align: center;
-}
-
-a {
-    color: #fff;
-    text-decoration: none;
-    //        font-weight: 600;
-    span {
-        margin-right: 4px;
-    }
-}
-
-p#intro {
-    margin: 21px 0px 10px 0px;
-    color: gray;
-}
-
-div#line {
-    height: 2px;
-    width: 64px;
-    background-color: $color-background;
-    /* padding: 3px 0px; */
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin: 0 auto;
-}
-
-.inline {
-    display: inline;
-}
-
-section#actualidad {
-    div {
-        &.container {
+    
+    div#alimentos_patch {
+        position: absolute;
+        top: 130px;
+        right: 80px;
+        @media screen and (max-width: $tabletPortrait) {
+            display: none;
+        }
+        article#llamanos_full {
+            background-color: $color-background;
+            width: 400px;
+            color: #fff;
+            padding: 8px;
+            margin: 0 auto;
+            display: inline-block;
+            text-align: center;
+            height: 160px;
+            font-weight: 500;
             div {
                 &.row {
+                    top: 17px;
+                    position: absolute;
+                    font-size: 1.2em;
                     div {
-                        &.col-lg-12 {
-                            text-align: left;
+                        &.col-xs-12 {
+                            margin-bottom: 2px;
                             a {
-                                color: $color-background;
                                 &:hover {
                                     text-decoration: none;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            span {
+                &.glyphicon {
+                    margin-right: 6px;
+                    font-size: 20px;
+                    vertical-align: top;
+                }
+                &.triangulo {
+                    color: white;
+                    top: -18px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    
+    article#llamanos {
+        padding: 8px;
+        @media screen and (min-width: $tabletPortrait) {
+            display: none;
+        }
+    }
+    
+    .llamanos {
+        background-color: $color-background;
+        width: 73%;
+        color: #fff;
+        padding: 8px;
+        margin: 0 auto;
+        display: inline-block;
+        text-align: center;
+        font-weight: 500;
+    }
+    
+    a {
+        color: #fff;
+        text-decoration: none;
+        //        font-weight: 600;
+        span {
+            margin-right: 4px;
+        }
+    }
+    
+    p#intro {
+        margin: 21px 0px 10px 0px;
+        color: gray;
+    }
+    
+    div#line {
+        height: 2px;
+        width: 64px;
+        background-color: $color-background;
+        /* padding: 3px 0px; */
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin: 0 auto;
+    }
+    
+    .inline {
+        display: inline;
+    }
+    
+    section#actualidad {
+        div {
+            &.container {
+                div {
+                    &.row {
+                        div {
+                            &.col-lg-12 {
+                                text-align: left;
+                                a {
+                                    color: $color-background;
+                                    &:hover {
+                                        text-decoration: none;
+                                    }
                                 }
                             }
                         }
@@ -278,66 +347,106 @@ section#actualidad {
             }
         }
     }
-}
-
-.clear-padding {
-    padding: 0px;
-}
-
-div#tarjeta {
-    padding-top: 10px;
-    figure {
-        display: inline-block;
-        width: 52%;
-        vertical-align: top;
-        padding: 8px 8px 7px 8px;
+    
+    .clear-padding {
+        padding: 0px;
     }
-    article {
-        display: inline-block;
-        width: 47%;
-        h3 {
-            margin: 7px 0px;
+    
+    div#tarjeta {
+        padding-top: 10px;
+        figure {
+            display: inline-block;
+            width: 52%;
+            vertical-align: top;
+            padding: 8px 8px 7px 8px;
+        }
+        article {
+            display: inline-block;
+            width: 47%;
+            h3 {
+                margin: 7px 0px;
+            }
         }
     }
-}
-
-.row-margin-bottom {
-    margin-bottom: 20px;
-}
-
-.box-shadow {
-    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
-    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
-    -ms-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
-    -o-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
-}
-
-a {
-    &.mas {
-        text-align: right;
-        padding: 6px;
+    
+    .row-margin-bottom {
+        margin-bottom: 20px;
+    }
+    
+    .box-shadow {
+        -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+        -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+        -ms-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+        -o-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+    }
+    
+    a {
+        &.mas {
+            text-align: right;
+            padding: 6px;
+            width: 100%;
+            display: block;
+            span {
+                text-align: center;
+                color: white;
+                padding: 3px 3.5px 3px 4px;
+                font-size: 1.3em;
+                background-color: $color-background;
+            }
+        }
+    }
+    
+    section#servicios {
         width: 100%;
-        display: block;
-        span {
-            text-align: center;
-            color: white;
-            padding: 3px 3.5px 3px 4px;
-            font-size: 1.3em;
-            background-color: $color-background;
+        background-color: $color-background;
+        div{
+            &.align_center{
+                text-align: center;
+                div{
+                    &.row{
+                            display: inline-block;
+                    }
+                }
+            }
+        }
+        a#titulo {
+            span {
+                display: inline-block;
+            }
+            h3 {
+                display: inline-block;
+            }
+        }
+        div#miniaturas_servicios {
+            a {
+                div {
+                    &.thumbnail {
+                        position: relative;
+                        overflow: hidden;
+                        border-radius: 0;
+                        background-color: $color-background;
+                        div {
+                            &.caption {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                background: rgba(90, 90, 90, 0.75);
+                                width: 100%;
+                                height: 100%;
+                                padding: 2%;
+                                display: none;
+                                text-align: left;
+                                color: #fff !important;
+                                z-index: 2;
+                                p {
+                                    span {}
+                                }
+                            }
+                        }
+                        img {}
+                    }
+                }
+            }
         }
     }
-}
-
-section#servicios {
-    width: 100%;
-    background-color: $color-background;
-    a#titulo {
-        span {
-            display: inline-block;
-        }
-        h3 {
-            display: inline-block;
-        }
-    }
-}
