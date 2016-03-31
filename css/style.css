@@ -36,7 +36,7 @@ nav {
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
 of those sections to manage the look and feel of the site. */
 .intro-section {
-  height: 100%;
+  height: 90%;
   padding-top: 65px;
   text-align: center;
   background: #fff; }
@@ -54,6 +54,62 @@ of those sections to manage the look and feel of the site. */
   width: 100%;
   font-size: 1.55em;
   padding: 0.3em 0px; }
+
+div.content_caption {
+  position: absolute;
+  color: #fff;
+  text-align: right;
+  z-index: 4;
+  display: inline-block;
+  float: none;
+  width: 4%;
+  margin-left: 1%; }
+  @media screen and (max-width: 480px) {
+    div.content_caption {
+      margin-left: 0.4%; } }
+  div.content_caption div#patch {
+    position: absolute;
+    /* top: 105px; */
+    /* right: 10px; */ }
+    div.content_caption div#patch article#llamanos_full {
+      background-color: #BD183A;
+      width: auto;
+      color: #fff;
+      padding: 8px;
+      margin: 0 auto;
+      display: inline-block;
+      text-align: center;
+      height: auto;
+      font-weight: 500;
+      /* opacity: 0.9; */ }
+      div.content_caption div#patch article#llamanos_full div.row {
+        top: 0px;
+        position: relative;
+        font-size: 1.2em; }
+  div.content_caption div.caption {
+    /* width: 410px; */
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 300px;
+    /* padding: 11px; */
+    text-align: center;
+    /* width: 326px; */
+    float: none;
+    margin-top: 190px; }
+    div.content_caption div.caption h3 {
+      color: #BD183A;
+      font-size: 1.5em;
+      padding-top: 7px;
+      margin: 5%;
+      text-transform: uppercase;
+      font-weight: 900; }
+    div.content_caption div.caption p {
+      color: #BD183A;
+      font-size: 1.2em;
+      font-weight: 500; }
+    @media screen and (max-width: 480px) {
+      div.content_caption div.caption {
+        margin-top: 0px; } }
 
 div.servicios-section {
   height: 100%;
@@ -88,7 +144,7 @@ div.servicios-section {
 
 .navbar-default {
   background-color: #FFFFFF;
-  border-top: 5px solid #BD183A;
+  border-top: 4px solid #BD183A;
   -webkit-transition: all 0.35s linear;
   transition: all 0.35s linear; }
 
@@ -125,41 +181,38 @@ a.navbar-brand > h1 {
   text-indent: 1000px;
   font-size: 0px; }
 
-div#patch {
-  position: absolute;
-  top: 105px;
-  right: 10px; }
-  @media screen and (max-width: 767px) {
-    div#patch {
-      display: none; } }
-  div#patch article#llamanos_full {
-    background-color: #BD183A;
-    width: 315px;
-    color: #fff;
-    padding: 8px;
-    margin: 0 auto;
-    display: inline-block;
-    text-align: center;
-    height: 160px;
-    font-weight: 500;
-    opacity: 0.9; }
-    div#patch article#llamanos_full div.row {
-      top: 17px;
-      position: absolute;
-      font-size: 1.2em; }
-      div#patch article#llamanos_full div.row div.col-xs-12 {
-        margin-bottom: 2px; }
-        div#patch article#llamanos_full div.row div.col-xs-12 a:hover {
-          text-decoration: none;
-          color: white; }
-    div#patch article#llamanos_full span.glyphicon {
-      margin-right: 6px;
-      font-size: 20px;
-      vertical-align: top; }
-    div#patch article#llamanos_full span.triangulo {
-      color: white;
-      top: -18px;
-      font-size: 20px; }
+@media screen and (max-width: 767px) {
+  div#patch {
+    display: none; } }
+
+div#patch article#llamanos_full {
+  background-color: #BD183A;
+  width: 315px;
+  color: #fff;
+  padding: 8px;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  height: 160px;
+  font-weight: 500;
+  opacity: 0.9; }
+  div#patch article#llamanos_full div.row {
+    top: 17px;
+    position: absolute;
+    font-size: 1.2em; }
+    div#patch article#llamanos_full div.row div.col-xs-12 {
+      margin-bottom: 2px; }
+      div#patch article#llamanos_full div.row div.col-xs-12 a:hover {
+        text-decoration: none;
+        color: white; }
+  div#patch article#llamanos_full span.glyphicon {
+    margin-right: 6px;
+    font-size: 20px;
+    vertical-align: top; }
+  div#patch article#llamanos_full span.triangulo {
+    color: white;
+    top: -18px;
+    font-size: 20px; }
 
 div#alimentos_patch {
   position: absolute;
@@ -234,11 +287,17 @@ div#line {
 .inline {
   display: inline; }
 
-section#actualidad div.container div.row div.col-lg-12 {
+a#actualidad {
+  width: 100%;
+  background-color: pink;
+  height: 78px;
+  display: block; }
+
+section div.container div.row div.col-lg-12 {
   text-align: left; }
-  section#actualidad div.container div.row div.col-lg-12 a {
+  section div.container div.row div.col-lg-12 a {
     color: #BD183A; }
-    section#actualidad div.container div.row div.col-lg-12 a:hover {
+    section div.container div.row div.col-lg-12 a:hover {
       text-decoration: none; }
 
 .clear-padding {
@@ -288,39 +347,45 @@ section#servicios {
     display: inline-block; }
   section#servicios a#titulo h3 {
     display: inline-block; }
-  section#servicios div#miniaturas_servicios a div.thumbnail {
-    position: relative;
-    overflow: hidden;
-    border-radius: 0;
-    border: none;
-    background-color: #BD183A;
-    display: inline-block; }
-    section#servicios div#miniaturas_servicios a div.thumbnail div.caption {
-      position: absolute;
-      /* top: 0; */
-      /* right: 0; */
-      background: rgba(255, 255, 255, 0.75);
-      width: 97.1%;
-      height: 26%;
-      padding: 2%;
-      display: none;
-      text-align: center;
-      color: #fff !important;
-      z-index: 2;
-      bottom: 0; }
-      section#servicios div#miniaturas_servicios a div.thumbnail div.caption p {
-        padding-left: 64%;
-        color: #BD183A;
-        font-weight: 500;
-        text-transform: capitalize; }
-        section#servicios div#miniaturas_servicios a div.thumbnail div.caption p span {
-          text-align: center;
-          color: white;
-          padding: 3px 3.5px 3px 4px;
-          font-size: 1.3em;
-          background-color: #BD183A;
-          line-height: 21px;
-          margin-left: 6px; }
-    section#servicios div#miniaturas_servicios a div.thumbnail img {
-      border: 1px solid #969696;
-      padding: 4px; }
+  section#servicios div#miniaturas_servicios a {
+    text-decoration: none; }
+    section#servicios div#miniaturas_servicios a:hover {
+      color: #fff; }
+    section#servicios div#miniaturas_servicios a div.thumbnail {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0;
+      border: none;
+      background-color: #BD183A;
+      display: inline-block; }
+      section#servicios div#miniaturas_servicios a div.thumbnail div.caption {
+        position: absolute;
+        /* top: 0; */
+        /* right: 0; */
+        background: rgba(255, 255, 255, 0.75);
+        width: 97.1%;
+        height: 26%;
+        padding: 2%;
+        display: none;
+        text-align: center;
+        color: #fff !important;
+        z-index: 2;
+        bottom: 3%; }
+        section#servicios div#miniaturas_servicios a div.thumbnail div.caption p {
+          padding-left: 55%;
+          color: #BD183A;
+          font-weight: 500;
+          text-transform: capitalize; }
+          section#servicios div#miniaturas_servicios a div.thumbnail div.caption p span {
+            text-align: center;
+            color: white;
+            padding: 1px 3.5px 1px 4px;
+            font-size: 1.3em;
+            background-color: #BD183A;
+            line-height: 21px;
+            margin-left: 6px; }
+      section#servicios div#miniaturas_servicios a div.thumbnail img {
+        border: 1px solid #969696;
+        padding: 4px; }
+    section#servicios div#miniaturas_servicios a p {
+      text-transform: capitalize; }

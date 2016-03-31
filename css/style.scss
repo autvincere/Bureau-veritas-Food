@@ -1,469 +1,577 @@
-    @font-face {
-        font-family: "Roboto", sans-serif;
-        src: url("../fonts/Roboto") format("ttf");
-    }
-    
-    // Converted Variables
-    $color-background: #BD183A;
-    // Custom Media Query Variables
-    $smartphone: 480px;
-    $tabletPortrait: 767px;
-    $tabletLandscape: 1024px;
-    $desktop: 1174px;
-    $largeScreen: 1400px;
-    //mixin
-    @mixin transition($tiempo) {
-        -webkit-transition: $tiempo;
-        -moz-transition: $tiempo;
-        -o-transition: $tiempo;
-        -ms-transition: $tiempo;
-        transition: $tiempo;
-    }
-    /*!
+@font-face {
+    font-family: "Roboto", sans-serif;
+    src: url("../fonts/Roboto") format("ttf");
+}
+
+// Converted Variables
+$color-background: #BD183A;
+// Custom Media Query Variables
+$smartphone: 480px;
+$tabletPortrait: 767px;
+$tabletLandscape: 1024px;
+$desktop: 1174px;
+$largeScreen: 1400px;
+//mixin
+@mixin transition($tiempo) {
+    -webkit-transition: $tiempo;
+    -moz-transition: $tiempo;
+    -o-transition: $tiempo;
+    -ms-transition: $tiempo;
+    transition: $tiempo;
+}
+
+
+/*!
  * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-    
-    body {
-        width: 100%;
-        height: 100%;
-        font-family: Roboto, Helvetica, sans-serif;
-        -moz-box-sizing: border-box;
-        -o-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-    }
-    
-    html {
-        width: 100%;
-        height: 100%;
-    }
-    
-    nav {
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Roboto, Helvetica, sans-serif;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    @include transition(all 0.35s linear);
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 10px 0;
         @include transition(all 0.35s linear);
+        //        -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        //        -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        //        transition: background .5s ease-in-out, padding .5s ease-in-out;
     }
-    
-    @media(min-width:767px) {
-        .navbar {
-            padding: 10px 0;
-            @include transition(all 0.35s linear);
-            //        -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
-            //        -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
-            //        transition: background .5s ease-in-out, padding .5s ease-in-out;
-        }
-        .top-nav-collapse {
-            padding: 0;
-        }
+    .top-nav-collapse {
+        padding: 0;
     }
-    /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+}
+
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
 of those sections to manage the look and feel of the site. */
-    
-    .intro-section {
-        height: 100%;
-        padding-top: 65px;
-        text-align: center;
-        background: #fff;
+
+.intro-section {
+    height: 90%;
+    padding-top: 65px;
+    text-align: center;
+    background: #fff;
+}
+
+.about-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
+
+.actualidad-section {
+    height: 100%;
+    float: left;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 1.55em;
+    padding: 0.3em 0px;
+}
+
+//div {
+//    &.flexslider-container {
+//        div {
+//            &.flexslider {
+//                div {
+//                    flex-viewport {
+//                        ul {
+//                            &.slides {
+//                                li {
+div {
+    &.content_caption {
+        position: absolute;
+        color: #fff;
+        //                                            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+        //                                            zoom: 1;
+        text-align: right;
+        z-index: 4;
+        display: inline-block;
+        float: none;
+        width: 4%;
+        margin-left: 1%;
+        @media screen and (max-width: $smartphone) {
+            margin-left: 0.4%;
+        }
+        div#patch {
+            position: absolute;
+            /* top: 105px; */
+            /* right: 10px; */
+            article#llamanos_full {
+                background-color: #BD183A;
+                width: auto;
+                color: #fff;
+                padding: 8px;
+                margin: 0 auto;
+                display: inline-block;
+                text-align: center;
+                height: auto;
+                font-weight: 500;
+                /* opacity: 0.9; */
+                div {
+                    &.row {
+                        top: 0px;
+                        position: relative;
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+        div {
+            &.caption {
+                /* width: 410px; */
+                display: inline-block;
+                background-color: rgba(255, 255, 255, 0.6);
+                height: 300px;
+                /* padding: 11px; */
+                text-align: center;
+                /* width: 326px; */
+                float: none;
+                margin-top: 190px;
+                h3 {
+                    color: $color-background;
+                    font-size: 1.5em;
+                    padding-top: 7px;
+                    margin: 5%;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                }
+                p {
+                    color: $color-background;
+                    font-size: 1.2em;
+                    font-weight: 500;
+                }
+                @media screen and (max-width: $smartphone) {
+                    margin-top: 0px;
+                }
+            }
+        }
     }
-    
-    .about-section {
-        height: 100%;
-        padding-top: 150px;
-        text-align: center;
-        background: #eee;
-    }
-    
-    .actualidad-section {
+}
+
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
+div {
+    &.servicios-section {
         height: 100%;
         float: left;
         margin: 0 auto;
         width: 100%;
-        font-size: 1.55em;
         padding: 0.3em 0px;
-    }
-    
-    div {
-        &.servicios-section {
-            height: 100%;
-            float: left;
-            margin: 0 auto;
-            width: 100%;
-            padding: 0.3em 0px;
-            text-transform: capitalize;
-            font-size: 2rem;
-            text-decoration: none;
-            div {
-                &.col-lg-12 {
-                    a#titulo {
-                        text-decoration: none;
-                        &:hover {
-                            color: #fff;
-                        }
+        text-transform: capitalize;
+        font-size: 2rem;
+        text-decoration: none;
+        div {
+            &.col-lg-12 {
+                a#titulo {
+                    text-decoration: none;
+                    &:hover {
+                        color: #fff;
                     }
                 }
             }
         }
     }
-    
-    .contact-section {
-        height: 100%;
-        padding-top: 150px;
-        text-align: center;
-        background: #eee;
-    }
-    
-    .navbar-header {
-        @include transition(all 0.35s linear);
-    }
-    
-    .navbar-brand {
-        height: 73px;
-        padding: 4px 14px;
-    }
-    
-    .navbar-toggle {
-        margin-top: 22px;
-    }
-    
-    .navbar-default {
-        background-color: #FFFFFF;
-        //        border-bottom: none!important;
-        border-top: 5px solid $color-background;
-        @include transition(all 0.35s linear);
-    }
-    
-    .navbar-default .navbar-nav>.active>a,
-    .navbar-default .navbar-nav>.active>a:focus,
-    .navbar-default .navbar-nav>.active> a:hover {
-        color: #555;
-        background-color: rgba(189, 24, 58, 0.12);
-        //    display: inline-block;
-    }
-    /*estilos celular*/
-    
-    .navbar-toggle .icon-bar {
-        display: block;
-        width: 30px;
-        height: 4px;
-        border-radius: 1px;
-    }
-    
-    .navbar-default .navbar-toggle {
-        border-color: #fff;
-    }
-    /*Cierre estilos celular*/
-    
-    div#main_slider {
-        width: 100%;
-        background-color: green;
-    }
-    
-    a {
-        &.navbar-brand> {
-            img#desktop {
-                @media screen and (max-width: $tabletPortrait) {
-                    display: none;
-                }
-            }
-            img#movil {
-                @media screen and (min-width: $tabletPortrait) {
-                    display: none;
-                }
-            }
-            h1 {
-                text-indent: 1000px;
-                font-size: 0px;
+}
+
+.contact-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
+
+.navbar-header {
+    @include transition(all 0.35s linear);
+}
+
+.navbar-brand {
+    height: 73px;
+    padding: 4px 14px;
+}
+
+.navbar-toggle {
+    margin-top: 22px;
+}
+
+.navbar-default {
+    background-color: #FFFFFF;
+    //        border-bottom: none!important;
+    border-top: 4px solid $color-background;
+    @include transition(all 0.35s linear);
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active> a:hover {
+    color: #555;
+    background-color: rgba(189, 24, 58, 0.12);
+    //    display: inline-block;
+}
+
+
+/*estilos celular*/
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 30px;
+    height: 4px;
+    border-radius: 1px;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+}
+
+
+/*Cierre estilos celular*/
+
+div#main_slider {
+    width: 100%;
+    background-color: green;
+}
+
+a {
+    &.navbar-brand> {
+        img#desktop {
+            @media screen and (max-width: $tabletPortrait) {
+                display: none;
             }
         }
-    }
-    
-    div#patch {
-        position: absolute;
-        top: 105px;
-        right: 10px;
-        @media screen and (max-width: $tabletPortrait) {
-            display: none;
-        }
-        article#llamanos_full {
-            background-color: $color-background;
-            width: 315px;
-            color: #fff;
-            padding: 8px;
-            margin: 0 auto;
-            display: inline-block;
-            text-align: center;
-            height: 160px;
-            font-weight: 500;
-            opacity: 0.9;
-            div {
-                &.row {
-                    top: 17px;
-                    position: absolute;
-                    font-size: 1.2em;
-                    div {
-                        &.col-xs-12 {
-                            margin-bottom: 2px;
-                            a {
-                                &:hover {
-                                    text-decoration: none;
-                                    color: white;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            span {
-                &.glyphicon {
-                    margin-right: 6px;
-                    font-size: 20px;
-                    vertical-align: top;
-                }
-                &.triangulo {
-                    color: white;
-                    top: -18px;
-                    font-size: 20px;
-                }
+        img#movil {
+            @media screen and (min-width: $tabletPortrait) {
+                display: none;
             }
         }
-    }
-    
-    div#alimentos_patch {
-        position: absolute;
-        top: 130px;
-        right: 80px;
-        @media screen and (max-width: $tabletPortrait) {
-            display: none;
-        }
-        article#llamanos_full {
-            background-color: $color-background;
-            width: 400px;
-            color: #fff;
-            padding: 8px;
-            margin: 0 auto;
-            display: inline-block;
-            text-align: center;
-            height: 160px;
-            font-weight: 500;
-            div {
-                &.row {
-                    top: 17px;
-                    position: absolute;
-                    font-size: 1.2em;
-                    div {
-                        &.col-xs-12 {
-                            margin-bottom: 2px;
-                            a {
-                                &:hover {
-                                    text-decoration: none;
-                                    color: white;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            span {
-                &.glyphicon {
-                    margin-right: 6px;
-                    font-size: 20px;
-                    vertical-align: top;
-                }
-                &.triangulo {
-                    color: white;
-                    top: -18px;
-                    font-size: 20px;
-                }
-            }
+        h1 {
+            text-indent: 1000px;
+            font-size: 0px;
         }
     }
-    
-    article#llamanos {
-        padding: 8px;
-        @media screen and (min-width: $tabletPortrait) {
-            display: none;
-        }
+}
+
+div#patch {
+    @media screen and (max-width: $tabletPortrait) {
+        display: none;
     }
-    
-    .llamanos {
+    article#llamanos_full {
         background-color: $color-background;
-        width: 73%;
+        width: 315px;
         color: #fff;
         padding: 8px;
         margin: 0 auto;
         display: inline-block;
         text-align: center;
+        height: 160px;
         font-weight: 500;
-    }
-    
-    a {
-        color: #fff;
-        text-decoration: none;
-        //        font-weight: 600;
+        opacity: 0.9;
+        div {
+            &.row {
+                top: 17px;
+                position: absolute;
+                font-size: 1.2em;
+                div {
+                    &.col-xs-12 {
+                        margin-bottom: 2px;
+                        a {
+                            &:hover {
+                                text-decoration: none;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         span {
-            margin-right: 4px;
-        }
-    }
-    
-    p#intro {
-        margin: 21px 0px 10px 0px;
-        color: gray;
-    }
-    
-    div#line {
-        height: 2px;
-        width: 64px;
-        background-color: $color-background;
-        /* padding: 3px 0px; */
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin: 0 auto;
-    }
-    
-    .inline {
-        display: inline;
-    }
-    
-    section#actualidad {
-        div {
-            &.container {
-                div {
-                    &.row {
-                        div {
-                            &.col-lg-12 {
-                                text-align: left;
-                                a {
-                                    color: $color-background;
-                                    &:hover {
-                                        text-decoration: none;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+            &.glyphicon {
+                margin-right: 6px;
+                font-size: 20px;
+                vertical-align: top;
             }
-        }
-    }
-    
-    .clear-padding {
-        padding: 0px;
-    }
-    
-    div#tarjeta {
-        padding-top: 10px;
-        figure {
-            display: inline-block;
-            width: 52%;
-            vertical-align: top;
-            padding: 8px 8px 7px 8px;
-        }
-        article {
-            display: inline-block;
-            width: 47%;
-            h3 {
-                margin: 7px 0px;
-            }
-        }
-    }
-    
-    .row-margin-bottom {
-        margin-bottom: 20px;
-    }
-    
-    .box-shadow {
-        -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
-        -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
-        -ms-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
-        -o-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
-    }
-    
-    a {
-        &.mas {
-            text-align: right;
-            padding: 6px;
-            width: 100%;
-            display: block;
-            span {
-                text-align: center;
+            &.triangulo {
                 color: white;
-                padding: 3px 3.5px 3px 4px;
-                font-size: 1.3em;
-                background-color: $color-background;
+                top: -18px;
+                font-size: 20px;
             }
         }
     }
-    
-    section#servicios {
-        width: 100%;
+}
+
+div#alimentos_patch {
+    position: absolute;
+    top: 130px;
+    right: 80px;
+    @media screen and (max-width: $tabletPortrait) {
+        display: none;
+    }
+    article#llamanos_full {
         background-color: $color-background;
+        width: 400px;
+        color: #fff;
+        padding: 8px;
+        margin: 0 auto;
+        display: inline-block;
+        text-align: center;
+        height: 160px;
+        font-weight: 500;
         div {
-            &.align_center {
-                text-align: center;
+            &.row {
+                top: 17px;
+                position: absolute;
+                font-size: 1.2em;
                 div {
-                    &.row {
-                        display: inline-block;
+                    &.col-xs-12 {
+                        margin-bottom: 2px;
+                        a {
+                            &:hover {
+                                text-decoration: none;
+                                color: white;
+                            }
+                        }
                     }
                 }
             }
         }
-        a#titulo {
-            span {
-                display: inline-block;
+        span {
+            &.glyphicon {
+                margin-right: 6px;
+                font-size: 20px;
+                vertical-align: top;
             }
-            h3 {
-                display: inline-block;
+            &.triangulo {
+                color: white;
+                top: -18px;
+                font-size: 20px;
             }
         }
-        div#miniaturas_servicios {
-            a {
-                div {
-                    &.thumbnail {
-                        position: relative;
-                        overflow: hidden;
-                        border-radius: 0;
-                        border: none;
-                        background-color: $color-background;
-                        display: inline-block;
-                        div {
-                            &.caption {
-                                position: absolute;
-                                /* top: 0; */
-                                /* right: 0; */
-                                background: rgba(255, 255, 255, 0.75);
-                                width: 97.1%;
-                                height: 26%;
-                                padding: 2%;
-                                display: none;
-                                text-align: center;
-                                color: #fff !important;
-                                z-index: 2;
-                                bottom: 0;
-                                p {
-                                    padding-left: 64%;
-                                    color: #BD183A;
-                                    font-weight: 500;
-                                    text-transform: capitalize;
-                                    span {
-                                        text-align: center;
-                                        color: white;
-                                        padding: 3px 3.5px 3px 4px;
-                                        font-size: 1.3em;
-                                        background-color: $color-background;
-                                        line-height: 21px;
-                                        margin-left: 6px;
-                                    }
+    }
+}
+
+article#llamanos {
+    padding: 8px;
+    @media screen and (min-width: $tabletPortrait) {
+        display: none;
+    }
+}
+
+.llamanos {
+    background-color: $color-background;
+    width: 73%;
+    color: #fff;
+    padding: 8px;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    //        font-weight: 600;
+    span {
+        margin-right: 4px;
+    }
+}
+
+p#intro {
+    margin: 21px 0px 10px 0px;
+    color: gray;
+}
+
+div#line {
+    height: 2px;
+    width: 64px;
+    background-color: $color-background;
+    /* padding: 3px 0px; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+}
+
+.inline {
+    display: inline;
+}
+
+a#actualidad {
+    width: 100%;
+    background-color: pink;
+    height: 78px;
+    display: block;
+}
+
+section {
+    div {
+        &.container {
+            div {
+                &.row {
+                    div {
+                        &.col-lg-12 {
+                            text-align: left;
+                            a {
+                                color: $color-background;
+                                &:hover {
+                                    text-decoration: none;
                                 }
                             }
                         }
-                        img {
-                            border: 1px solid #969696;
-                            padding: 4px;
-                        }
                     }
                 }
             }
         }
     }
+}
+
+.clear-padding {
+    padding: 0px;
+}
+
+div#tarjeta {
+    padding-top: 10px;
+    figure {
+        display: inline-block;
+        width: 52%;
+        vertical-align: top;
+        padding: 8px 8px 7px 8px;
+    }
+    article {
+        display: inline-block;
+        width: 47%;
+        h3 {
+            margin: 7px 0px;
+        }
+    }
+}
+
+.row-margin-bottom {
+    margin-bottom: 20px;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+    -ms-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+    -o-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+}
+
+a {
+    &.mas {
+        text-align: right;
+        padding: 6px;
+        width: 100%;
+        display: block;
+        span {
+            text-align: center;
+            color: white;
+            padding: 3px 3.5px 3px 4px;
+            font-size: 1.3em;
+            background-color: $color-background;
+        }
+    }
+}
+
+section#servicios {
+    width: 100%;
+    background-color: $color-background;
+    div {
+        &.align_center {
+            text-align: center;
+            div {
+                &.row {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    a#titulo {
+        span {
+            display: inline-block;
+        }
+        h3 {
+            display: inline-block;
+        }
+    }
+    div#miniaturas_servicios {
+        a {
+            text-decoration: none;
+            &:hover {
+                color: #fff;
+            }
+            div {
+                &.thumbnail {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 0;
+                    border: none;
+                    background-color: $color-background;
+                    display: inline-block;
+                    div {
+                        &.caption {
+                            position: absolute;
+                            /* top: 0; */
+                            /* right: 0; */
+                            background: rgba(255, 255, 255, 0.75);
+                            width: 97.1%;
+                            height: 26%;
+                            padding: 2%;
+                            display: none;
+                            text-align: center;
+                            color: #fff !important;
+                            z-index: 2;
+                            bottom: 3%;
+                            p {
+                                padding-left: 55%;
+                                color: #BD183A;
+                                font-weight: 500;
+                                text-transform: capitalize;
+                                span {
+                                    text-align: center;
+                                    color: white;
+                                    padding: 1px 3.5px 1px 4px;
+                                    font-size: 1.3em;
+                                    background-color: $color-background;
+                                    line-height: 21px;
+                                    margin-left: 6px;
+                                }
+                            }
+                        }
+                    }
+                    img {
+                        border: 1px solid #969696;
+                        padding: 4px;
+                    }
+                }
+            }
+            p {
+                text-transform: capitalize;
+            }
+        }
+    }
+}
