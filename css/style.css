@@ -62,11 +62,14 @@ div.content_caption {
   z-index: 4;
   display: inline-block;
   float: none;
-  width: 4%;
   margin-left: 1%; }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) and (min-width: 480px) {
     div.content_caption {
       margin-left: 0.4%; } }
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    div.content_caption {
+      margin-left: 1.1%;
+      width: 384px; } }
   div.content_caption div#patch {
     position: absolute;
     /* top: 105px; */
@@ -96,6 +99,13 @@ div.content_caption {
     /* width: 326px; */
     float: none;
     margin-top: 190px; }
+    @media screen and (max-width: 768px) and (min-width: 480px) {
+      div.content_caption div.caption {
+        margin-top: -24px; } }
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+      div.content_caption div.caption {
+        margin-top: 168px;
+        width: 100%; } }
     div.content_caption div.caption h3 {
       color: #BD183A;
       font-size: 1.5em;
@@ -103,13 +113,16 @@ div.content_caption {
       margin: 5%;
       text-transform: uppercase;
       font-weight: 900; }
+      @media screen and (max-width: 1024px) and (min-width: 768px) {
+        div.content_caption div.caption h3 {
+          font-size: 1.8em; } }
     div.content_caption div.caption p {
       color: #BD183A;
-      font-size: 1.2em;
+      font-size: 1.3em;
       font-weight: 500; }
-    @media screen and (max-width: 480px) {
-      div.content_caption div.caption {
-        margin-top: 0px; } }
+      @media screen and (max-width: 1024px) and (min-width: 768px) {
+        div.content_caption div.caption p {
+          font-size: 1.5em; } }
 
 div.servicios-section {
   height: 100%;
@@ -169,11 +182,11 @@ div#main_slider {
   width: 100%;
   background-color: green; }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   a.navbar-brand > img#desktop {
     display: none; } }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   a.navbar-brand > img#movil {
     display: none; } }
 
@@ -181,7 +194,7 @@ a.navbar-brand > h1 {
   text-indent: 1000px;
   font-size: 0px; }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   div#patch {
     display: none; } }
 
@@ -218,7 +231,7 @@ div#alimentos_patch {
   position: absolute;
   top: 130px;
   right: 80px; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1024px) {
     div#alimentos_patch {
       display: none; } }
   div#alimentos_patch article#llamanos_full {
@@ -251,7 +264,7 @@ div#alimentos_patch {
 
 article#llamanos {
   padding: 8px; }
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 1024px) {
     article#llamanos {
       display: none; } }
 
